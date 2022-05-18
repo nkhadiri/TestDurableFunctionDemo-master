@@ -18,7 +18,6 @@ namespace DurableFunctionApp
         {
             var entityId = new EntityId(nameof(Counter), context.InstanceId);
 
-            var count = await context.CallEntityAsync<int>(entityId, nameof(Counter.Get));
 
             var outputs = new List<string>();
 
